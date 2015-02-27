@@ -1,8 +1,9 @@
 require_relative 'config/environment'
 
 class GameApp < Sinatra::Base
-  get '/rps/:play' do
-    # Your app code goes here
+   get '/' do
+    @rps = RPSGame.new(:rock)
     erb :rps_game
-  end
+end
+
 end
